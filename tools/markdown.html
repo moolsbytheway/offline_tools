@@ -2,22 +2,11 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
 <title>Markdown</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Preview Markdown files with this simple offline renderer. Supports GitHub-flavored markdown syntax." name="description"/><link href="https://markdown.camelcodes.net" rel="canonical"/></head>
+<meta content="Preview Markdown files with this simple offline renderer. Supports GitHub-flavored markdown syntax. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/><link href="https://markdown.camelcodes.net" rel="canonical"/></head>
 <body><main>
 <h2>Markdown Preview</h2><h3>Markdown preview:</h3><p>Write or paste <strong>Markdown</strong> content and see the rendered HTML output instantly. Supports common GFM features.</p>
 <textarea id="input" oninput="renderMarkdown()" placeholder="Enter markdown here..."></textarea>

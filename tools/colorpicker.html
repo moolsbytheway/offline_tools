@@ -2,22 +2,11 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
 <title>Colorpicker</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Pick and preview color codes in HEX, RGB, and HSL. A simple color picker tool for designers and developers." name="description"/><link href="https://colorpicker.camelcodes.net" rel="canonical"/></head>
+<meta content="Pick and preview color codes in HEX, RGB, and HSL. A simple color picker tool for designers and developers. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/><link href="https://colorpicker.camelcodes.net" rel="canonical"/></head>
 <body><main><main>
 <h2>Color Picker</h2><h3>Color formats supported:</h3><p>Select and view colors in <strong>HEX</strong>, <strong>RGB</strong>, and <strong>HSL</strong> formats. Useful for web and UI design.</p>
 <input id="colorInput" oninput="updateColor()" type="color"/>

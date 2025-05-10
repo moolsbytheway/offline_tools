@@ -2,29 +2,18 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
 <title>Gzip</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Compress and decompress GZIP files online for free. Fast and offline-capable compression tool." name="description"/><link href="https://gzip.camelcodes.net" rel="canonical"/></head>
+<meta content="Compress and decompress GZIP files online for free. Fast and offline-capable compression tool. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/><link href="https://gzip.camelcodes.net" rel="canonical"/></head>
 <body><main>
 <h2>GZIP Compress/Decompress</h2><h3>Compress or decompress:</h3><p>This tool allows you to <strong>compress</strong> plain text to GZIP format and <strong>decompress</strong> GZIP files into readable text.</p>
 <textarea id="input" placeholder="Enter text"></textarea><br/>
 <button onclick="gzipCompress()">Compress</button>
 <button onclick="gzipDecompress()">Decompress</button>
 <textarea id="output" readonly=""></textarea>
-<script src="../lib/pako.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 <script src="../js/gzip.js"></script>
 </main><aside>
 <h2 class="title"><a href="https://tools.camelcodes.net">Offline free tools</a></h2>

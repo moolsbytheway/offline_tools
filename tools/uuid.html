@@ -2,22 +2,12 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
-<title>Uuid</title>
+<title>Uuid 4 generator</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Generate UUIDs (v4) instantly. Use for IDs, references, and more. Offline UUID generator." name="description"/><link href="https://uuid.camelcodes.net" rel="canonical"/></head>
+<meta content="Generate UUIDs (v4) instantly. Use for IDs, references, and more. Offline UUID generator. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/>
+        <link href="https://uuid.camelcodes.net" rel="canonical"/></head>
 <body><main>
 <h2>UUID Generator</h2><h3>Create UUIDs:</h3><p>Generate random <strong>UUID version 4</strong> strings for identifiers in apps, databases, or testing environments.</p>
 <button onclick="generateUUID()">Generate UUID</button>

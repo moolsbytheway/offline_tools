@@ -2,22 +2,11 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
 <title>QR Code Generator</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Generate QR codes from text or URLs. A quick offline QR code creator." name="description"/><link href="https://qrcode.camelcodes.net" rel="canonical"/></head>
+<meta content="Generate QR codes from text or URLs. A quick offline QR code creator. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/><link href="https://qrcode.camelcodes.net" rel="canonical"/></head>
 <body><main>
 <h2>QR Code Generator</h2><h3>Create QR codes:</h3><p>Enter text or a URL to generate a <strong>QR code</strong> you can scan with any device. Set width and height options as needed.</p>
 <label>Text or URL: <input class="input" id="input" placeholder="Enter text or URL" type="text"/></label>

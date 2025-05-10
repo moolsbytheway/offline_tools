@@ -2,22 +2,11 @@
 
 <html lang="en">
 <head>
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <script>
-                if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
-                                console.error('Service Worker registration failed:', err);
-                        });
-                }
-        </script>
 <meta charset="utf-8"/>
 <title>Jwt</title>
 <link href="../style.css" rel="stylesheet"/>
-<meta content="Decode JWT tokens to view header, payload, and signature parts. Free offline JWT decoder." name="description"/><link href="https://jwt.camelcodes.net" rel="canonical"/></head>
+<meta content="Decode JWT tokens to view header, payload, and signature parts. Free offline JWT decoder. Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly" name="description"/><link href="https://jwt.camelcodes.net" rel="canonical"/></head>
 <body><main>
 <h2>JWT Decoder</h2><h3>Inspect JWTs:</h3><p>This tool decodes <strong>JSON Web Tokens (JWT)</strong> and shows the header, payload, and signature contents without validating them.</p>
 <textarea id="input" placeholder="Paste JWT token here"></textarea>
