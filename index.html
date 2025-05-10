@@ -23,7 +23,8 @@
 <body>
 <main>
     <main><h2>Choose a tool to begin.</h2></main>
-    <p><strong>Privacy Notice:</strong> Everything on this website runs entirely in your browser. No data is sent to any server — 100% client-side and offline-friendly.</p>
+    <p><strong>Privacy Notice:</strong> Everything on this website runs entirely in your browser. No data is sent to any
+        server — 100% client-side and offline-friendly.</p>
 
 
 </main>
@@ -55,13 +56,15 @@
 </aside>
 <script>
     (function () {
-        const subdomain = window.location.hostname.split('.')[0];
+        if (!window.location.includes("tools.camelcodes")) {
+            const subdomain = window.location.hostname.split('.')[0];
 
-        const targetUrl = `https://${subdomain}.camelcodes.net/tools/${subdomain}.html`;
+            const targetUrl = `https://${subdomain}.camelcodes.net/tools/${subdomain}.html`;
 
-        // Avoid infinite redirect loop if already on the correct page
-        if (!window.location.pathname.includes(`/tools/${subdomain}.html`)) {
-            window.location.replace(targetUrl);
+            // Avoid infinite redirect loop if already on the correct page
+            if (!window.location.pathname.includes(`/tools/${subdomain}.html`)) {
+                window.location.replace(targetUrl);
+            }
         }
     })();
 </script>
