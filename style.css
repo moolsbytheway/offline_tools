@@ -1,4 +1,28 @@
 
+@media all and (min-width: 1024px) {
+
+    body {
+        margin: 0;
+        height: 100vh;
+        padding: 0;
+        flex-direction: row-reverse;
+    }
+
+    aside {
+        width: 250px;
+        background: #f4f4f4;
+        padding: 10px;
+        overflow-y: auto;
+        border-right: 1px solid #ccc;
+    }
+
+    main {
+        flex: 1;
+        padding: 10px;
+        margin-left: 10px;
+        overflow-y: auto;
+    }
+}
 body {
     padding: 10px;
     font-family: monospace, sans-serif;
@@ -86,30 +110,4 @@ input[type="search"] {
     padding: 0.5em;
     margin-bottom: 1em;
     box-sizing: border-box;
-}
-
-
-@media all and (min-width: 1024px) {
-
-    body {
-        margin: 0;
-        height: 100vh;
-        padding: 0;
-        flex-direction: row-reverse;
-    }
-
-    aside {
-        width: 250px;
-        background: #f4f4f4;
-        padding: 10px;
-        overflow-y: auto;
-        border-right: 1px solid #ccc;
-    }
-
-    main {
-        flex: 1;
-        padding: 10px;
-        margin-left: 10px;
-        overflow-y: auto;
-    }
 }
