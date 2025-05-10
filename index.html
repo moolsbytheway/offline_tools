@@ -47,7 +47,7 @@
 </aside>
 <script>
     (function () {
-        if (!window.location.includes("tools.camelcodes")) {
+        if (!window.location.host.includes("tools.camelcodes")) {
             const subdomain = window.location.hostname.split('.')[0];
 
             const targetUrl = `https://${subdomain}.camelcodes.net/tools/${subdomain}.html`;
