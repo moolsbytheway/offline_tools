@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offline free tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://tools.camelcodes.net/index.html" rel="canonical"/>
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').catch(err => {
+                console.error('Service Worker registration failed:', err);
+            });
+        }
+    </script>
+
+</head>
+<body>
+<main>
+    <main><h2>Choose a tool to begin.</h2></main>
+    <p><strong>Privacy Notice:</strong> Everything on this website runs entirely in your browser. No data is sent to any server — 100% client-side and offline-friendly.</p>
+
+
+</main>
+<aside>
+    <h2 class=title><a href="index.html">Offline free tools</a></h2>
+    <input class="input" type="search" id="searchBox" placeholder="Search tools..." oninput="filterTools()"/>
+    <ul id="toolList">
+        <li><a href="https://base64_encode.camelcodes.net">Base64 Encode</a></li>
+        <li><a href="https://base64_decode.camelcodes.net">Base64 Decode</a></li>
+        <li><a href="https://uuid.camelcodes.net">UUID Generator</a></li>
+        <li><a href="https://jwt.camelcodes.net">JWT Decoder</a></li>
+        <li><a href="https://json_minifier.camelcodes.net">JSON Minifier</a></li>
+        <li><a href="https://json_formatter.camelcodes.net">JSON Formatter</a></li>
+        <li><a href="https://gzip.camelcodes.net">GZIP Compress/Decompress</a></li>
+        <li><a href="https://urlencode.camelcodes.net">URL Encode/Decode</a></li>
+        <li><a href="https://timestamp.camelcodes.net">Unix Timestamp Converter</a></li>
+        <li><a href="https://random.camelcodes.net">Random String Generator</a></li>
+        <li><a href="https://textcase.camelcodes.net">Text Case Converter</a></li>
+        <li><a href="https://wordcount.camelcodes.net">Word & Character Counter</a></li>
+        <li><a href="https://colorpicker.camelcodes.net">Color Picker</a></li>
+        <li><a href="https://markdown.camelcodes.net">Markdown Preview</a></li>
+        <li><a href="https://htmlviewer.camelcodes.net">HTML Viewer</a></li>
+        <li><a href="https://regex.camelcodes.net">Regex Tester</a></li>
+        <li><a href="https://numberbase.camelcodes.net">Number Base Converter</a></li>
+        <li><a href="https://qrcode.camelcodes.net">QR Code Generator</a></li>
+    </ul>
+
+
+</aside>
+<script>
+    (function () {
+        const subdomain = window.location.hostname.split('.')[0];
+
+        const targetUrl = `https://${subdomain}.camelcodes.net/tools/${subdomain}.html`;
+
+        // Avoid infinite redirect loop if already on the correct page
+        if (!window.location.pathname.includes(`/tools/${subdomain}.html`)) {
+            window.location.replace(targetUrl);
+        }
+    })();
+</script>
+
+<script>
+
+    function filterTools() {
+        const query = document.getElementById('searchBox').value.toLowerCase();
+        const items = document.querySelectorAll('#toolList li');
+        items.forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? 'list-item' : 'none';
+        });
+    }
+
+</script>
+</body>
+</html>
