@@ -113,3 +113,7 @@ input[type="search"] {
         overflow-y: auto;
     }
 }
+
+#header { background: #fbeaea; color: #a33; }
+#payload { background: #eaf4fb; color: #116; }
+#signature { background: #eafbea; color: #161; }
