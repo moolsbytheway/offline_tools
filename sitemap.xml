@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://tools.camelcodes.net/</loc></url>
+    <url><loc>https://tools.camelcodes.net/index.html</loc></url>
+    <url><loc>https://base64_encode.camelcodes.net/tools/base64_encode.html</loc></url>
+    <url><loc>https://base64_decode.camelcodes.net/tools/base64_decode.html</loc></url>
+    <url><loc>https://colorpicker.camelcodes.net/tools/colorpicker.html</loc></url>
+    <url><loc>https://gzip.camelcodes.net/tools/gzip.html</loc></url>
+    <url><loc>https://htmlviewer.camelcodes.net/tools/htmlviewer.html</loc></url>
+    <url><loc>https://json_formatter.camelcodes.net/tools/json_formatter.html</loc></url>
+    <url><loc>https://json_minifier.camelcodes.net/tools/json_minifier.html</loc></url>
+    <url><loc>https://jwt.camelcodes.net/tools/jwt.html</loc></url>
+    <url><loc>https://markdown.camelcodes.net/tools/markdown.html</loc></url>
+    <url><loc>https://numberbase.camelcodes.net/tools/numberbase.html</loc></url>
+    <url><loc>https://qrcode.camelcodes.net/tools/qrcode.html</loc></url>
+    <url><loc>https://random.camelcodes.net/tools/random.html</loc></url>
+    <url><loc>https://regex.camelcodes.net/tools/regex.html</loc></url>
+    <url><loc>https://textcase.camelcodes.net/tools/textcase.html</loc></url>
+    <url><loc>https://timestamp.camelcodes.net/tools/timestamp.html</loc></url>
+    <url><loc>https://urlencode.camelcodes.net/tools/urlencode.html</loc></url>
+    <url><loc>https://uuid.camelcodes.net/tools/uuid.html</loc></url>
+    <url><loc>https://wordcount.camelcodes.net/tools/wordcount.html</loc></url>
+    <url><loc>https://bcrypt_hash.camelcodes.net/tools/bcrypt_hash.html</loc></url>
+</urlset>

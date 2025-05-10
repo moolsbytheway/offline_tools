@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script>
+                if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+                                console.error('Service Worker registration failed:', err);
+                        });
+                }
+        </script>
+<meta charset="utf-8"/>
+<title>Uuid</title>
+<link href="../style.css" rel="stylesheet"/>
+<meta content="Generate UUIDs (v4) instantly. Use for IDs, references, and more. Offline UUID generator." name="description"/><link href="https://uuid.camelcodes.net" rel="canonical"/></head>
+<body><main>
+<h2>UUID Generator</h2><h3>Create UUIDs:</h3><p>Generate random <strong>UUID version 4</strong> strings for identifiers in apps, databases, or testing environments.</p>
+<button onclick="generateUUID()">Generate UUID</button>
+<textarea id="output" readonly=""></textarea>
+<script src="../js/uuid.js"></script>
+</main><aside>
+<h2 class="title"><a href="../index.html">Offline free tools</a></h2>
+<input class="input" id="searchBox" oninput="filterTools()" placeholder="Search tools..." type="search"/>
+<ul id="toolList">
+        <li><a href="https://base64_encode.camelcodes.net">Base64 Encode</a></li>
+        <li><a href="https://base64_decode.camelcodes.net">Base64 Decode</a></li>
+        <li><a href="https://uuid.camelcodes.net">UUID Generator</a></li>
+        <li><a href="https://jwt.camelcodes.net">JWT Decoder</a></li>
+        <li><a href="https://json_minifier.camelcodes.net">JSON Minifier</a></li>
+        <li><a href="https://json_formatter.camelcodes.net">JSON Formatter</a></li>
+        <li><a href="https://gzip.camelcodes.net">GZIP Compress/Decompress</a></li>
+        <li><a href="https://urlencode.camelcodes.net">URL Encode/Decode</a></li>
+        <li><a href="https://timestamp.camelcodes.net">Unix Timestamp Converter</a></li>
+        <li><a href="https://random.camelcodes.net">Random String Generator</a></li>
+        <li><a href="https://textcase.camelcodes.net">Text Case Converter</a></li>
+        <li><a href="https://wordcount.camelcodes.net">Word & Character Counter</a></li>
+        <li><a href="https://colorpicker.camelcodes.net">Color Picker</a></li>
+        <li><a href="https://markdown.camelcodes.net">Markdown Preview</a></li>
+        <li><a href="https://htmlviewer.camelcodes.net">HTML Viewer</a></li>
+        <li><a href="https://regex.camelcodes.net">Regex Tester</a></li>
+        <li><a href="https://numberbase.camelcodes.net">Number Base Converter</a></li>
+
+        <li><a href="https://bcrypt_hash.camelcodes.net">Bcrypt password encoder</a></li><li><a href="https://qrcode.camelcodes.net">QR Code Generator</a></li>
+    </ul>
+</aside>
+<script>
+
+    function filterTools() {
+      const query = document.getElementById('searchBox').value.toLowerCase();
+      const items = document.querySelectorAll('#toolList li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(query) ? 'list-item' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').catch(err => {
+                console.error('Service Worker registration failed:', err);
+            });
+        }
+    </script>
+<meta charset="utf-8"/>
+<title>Json</title>
+<link href="../style.css" rel="stylesheet"/>
+<meta content="Minify JSON data by removing spaces and newlines. Useful for reducing size before sending over a network." name="description"/><link href="https://json_minifier.camelcodes.net" rel="canonical"/></head>
+<body>
+<main>
+<h2>JSON Minifier</h2><h3>Compact your JSON:</h3><p>Use this tool to <strong>minify JSON</strong> into a single-line format, reducing size for transmission or storage.</p>
+<textarea id="input" placeholder="Paste JSON here"></textarea><br/>
+<button onclick="minifyJSON()">Minify</button>
+<textarea id="output" readonly=""></textarea>
+<script src="../js/json.js"></script>
+</main>
+<aside>
+<h2 class="title"><a href="../index.html">Offline free tools</a></h2>
+<input class="input" id="searchBox" oninput="filterTools()" placeholder="Search tools..." type="search"/>
+<ul id="toolList">
+<li><a href="../tools/base64_encode.html">Base64 Encode</a></li>
+<li><a href="../tools/base64_decode.html">Base64 Decode</a></li>
+<li><a href="../tools/uuid.html">UUID Generator</a></li>
+<li><a href="../tools/jwt.html">JWT Decoder</a></li>
+<li><a href="../tools/json_minifier.html">JSON Minifier</a></li>
+<li><a href="../tools/json_formatter.html">JSON Formatter</a></li>
+<li><a href="../tools/gzip.html">GZIP Compress/Decompress</a></li>
+<li><a href="../tools/urlencode.html">URL Encode/Decode</a></li>
+<li><a href="../tools/timestamp.html">Unix Timestamp Converter</a></li>
+<li><a href="../tools/random.html">Random String Generator</a></li>
+<li><a href="../tools/textcase.html">Text Case Converter</a></li>
+<li><a href="../tools/wordcount.html">Word &amp; Character Counter</a></li>
+<li><a href="../tools/colorpicker.html">Color Picker</a></li>
+<li><a href="../tools/markdown.html">Markdown Preview</a></li>
+<li><a href="../tools/htmlviewer.html">HTML Viewer</a></li>
+<li><a href="../tools/regex.html">Regex Tester</a></li>
+<li><a href="../tools/numberbase.html">Number Base Converter</a></li>
+<li><a href="../tools/qrcode.html">QR Code Generator</a></li>
+</ul>
+</aside>
+<script>
+
+    function filterTools() {
+        const query = document.getElementById('searchBox').value.toLowerCase();
+        const items = document.querySelectorAll('#toolList li');
+        items.forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? 'list-item' : 'none';
+        });
+    }
+</script>
+</body>
+</html>

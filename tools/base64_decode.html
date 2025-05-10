@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script>
+                if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+                                console.error('Service Worker registration failed:', err);
+                        });
+                }
+        </script>
+<meta charset="utf-8"/>
+<title>Base64</title>
+<link href="../style.css" rel="stylesheet"/>
+<meta content="Decode Base64 strings into readable text with this offline Base64 decoder. Safe and fast." name="description"/><link href="https://base64_decode.camelcodes.net" rel="canonical"/></head>
+<body><main>
+<main>
+<h2>Base64 Decode</h2><h3>What can you decode?</h3><p>Use this tool to decode <strong>Base64-encoded strings</strong> into their original readable format, whether it's text, JSON, or binary data.</p>
+<textarea id="input" placeholder="Enter text"></textarea><br/>
+<button onclick="b64decode()">Decode</button>
+<textarea id="output" readonly=""></textarea></main>
+</main><aside>
+<h2 class="title"><a href="../index.html">Offline free tools</a></h2>
+<input class="input" id="searchBox" oninput="filterTools()" placeholder="Search tools..." type="search"/>
+<ul id="toolList">
+        <li><a href="https://base64_encode.camelcodes.net">Base64 Encode</a></li>
+        <li><a href="https://base64_decode.camelcodes.net">Base64 Decode</a></li>
+        <li><a href="https://uuid.camelcodes.net">UUID Generator</a></li>
+        <li><a href="https://jwt.camelcodes.net">JWT Decoder</a></li>
+        <li><a href="https://json_minifier.camelcodes.net">JSON Minifier</a></li>
+        <li><a href="https://json_formatter.camelcodes.net">JSON Formatter</a></li>
+        <li><a href="https://gzip.camelcodes.net">GZIP Compress/Decompress</a></li>
+        <li><a href="https://urlencode.camelcodes.net">URL Encode/Decode</a></li>
+        <li><a href="https://timestamp.camelcodes.net">Unix Timestamp Converter</a></li>
+        <li><a href="https://random.camelcodes.net">Random String Generator</a></li>
+        <li><a href="https://textcase.camelcodes.net">Text Case Converter</a></li>
+        <li><a href="https://wordcount.camelcodes.net">Word & Character Counter</a></li>
+        <li><a href="https://colorpicker.camelcodes.net">Color Picker</a></li>
+        <li><a href="https://markdown.camelcodes.net">Markdown Preview</a></li>
+        <li><a href="https://htmlviewer.camelcodes.net">HTML Viewer</a></li>
+        <li><a href="https://regex.camelcodes.net">Regex Tester</a></li>
+        <li><a href="https://numberbase.camelcodes.net">Number Base Converter</a></li>
+
+        <li><a href="https://bcrypt_hash.camelcodes.net">Bcrypt password encoder</a></li><li><a href="https://qrcode.camelcodes.net">QR Code Generator</a></li>
+    </ul>
+</aside>
+<script src="../js/base64.js"></script>
+<script>
+
+    function filterTools() {
+        const query = document.getElementById('searchBox').value.toLowerCase();
+        const items = document.querySelectorAll('#toolList li');
+        items.forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? 'list-item' : 'none';
+        });
+    }
+</script>
+</body>
+</html>
